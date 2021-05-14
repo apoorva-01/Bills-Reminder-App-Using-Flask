@@ -1,12 +1,20 @@
 # Bills-Reminder-App-Using-Flask
 
-It's an application ........likhungi soch rhi hu
+It's a web application based on flask framework which helps you in reminding your bill's payment by sending you an email 
+before its due date to avoid extra fee.
+[Website Link](https://priceless-johnson-639019.netlify.app/)
 
 ## Description
 
-likhungi soch rhi hu 
-
-[Website Link](https://priceless-johnson-639019.netlify.app/)
+What a user can do:
+1.First the user have to register.
+2.After registration process user can add bill reminde
+  - Enter Bill name (Eg-Electricity) and Bill Category (Eg-HouseHold)
+  - Amount of bill to be paid
+  - Due date of the bill
+  - User can choose when he/she want's to be notified before the due date (Ex- 1day beforehand/2days beforehand etc.)
+  - User can repeat that reminder every week/month/year.
+  - User can enter a note with the reminder which will be shown in the E-mail.
 
 
 
