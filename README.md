@@ -33,7 +33,7 @@ Pnerva Singh<br>
 <br>
 [@Github](https://github.com/punervasingh)
 <br>
-[@Resume](#)
+
 
 
 Nayan Raina Kaul<br>
@@ -41,14 +41,14 @@ Nayan Raina Kaul<br>
 <br>
 [@Github](https://github.com/nayanrainakaul)
 <br>
-[@Resume](#)
+
 
 Aakansha Kumari<br>
-[@Linkedin](#)
+[@Linkedin](https://www.linkedin.com/in/aakanksha-kumari-64013a210)
 <br>
 [@Github](https://github.com/aakanksha-198)
 <br>
-[@Resume](#)
+
 
 Apoorva Verma<br>
 [@Linkedin](https://www.linkedin.com/in/apoorva-verma-aa045a202/)
@@ -56,5 +56,3 @@ Apoorva Verma<br>
 [@Github](https://github.com/apoorva-01)
 <br>
 [@Resume](https://my-main-portfolio-website.herokuapp.com/)
-
-
