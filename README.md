@@ -8,7 +8,7 @@ before its due date to avoid extra fee.
 
 What a user can do:<br>
 1.First the user have to register.<br>
-2.After registration process user can add bill reminde<br>
+2.After registration process user can add bill reminder<br>
   - Enter Bill name (Eg-Electricity) and Bill Category (Eg-HouseHold)<br>
   - Amount of bill to be paid
   - Due date of the bill
