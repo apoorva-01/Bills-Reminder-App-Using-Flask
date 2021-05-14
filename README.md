@@ -6,10 +6,10 @@ before its due date to avoid extra fee.
 
 ## Description
 
-What a user can do:
-1.First the user have to register.
-2.After registration process user can add bill reminde
-  - Enter Bill name (Eg-Electricity) and Bill Category (Eg-HouseHold)
+What a user can do:<br>
+1.First the user have to register.<br>
+2.After registration process user can add bill reminde<br>
+  - Enter Bill name (Eg-Electricity) and Bill Category (Eg-HouseHold)<br>
   - Amount of bill to be paid
   - Due date of the bill
   - User can choose when he/she want's to be notified before the due date (Ex- 1day beforehand/2days beforehand etc.)
