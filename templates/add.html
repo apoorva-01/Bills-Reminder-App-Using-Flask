@@ -1,62 +1,21 @@
-<html>
-    <head>
-
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <meta charset="utf-8">
-
-        <!-- Page title -->
-        <title>Add</title>
-
-        <!-- Link to respective CSS stylesheet -->
-        <link rel="stylesheet" href="../static/css/addstyle.css">
-
-        <!-- Page Icon -->
-        <link rel="icon" href="../static/img/B.png">
-
-    </head>
+{% extends "layout.html" %}
 
 
-    <body>
-        <header>
+{% block head %}
+<!-- Page title -->
+<title>Add</title>
 
-            <!-- navigation bar -->
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-#000">
+<!-- Link to respective CSS stylesheet -->
+<link rel="stylesheet" href="../static/css/addstyle.css">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<!-- Page Icon -->
+<link rel="icon" href="../static/img/B.png">
+{% endblock %}
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="show_reminders.html">Show Reminder</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Add Reminder</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="search.html">Search</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">User Account</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+{% block body %}
 
         <!-- Form Container -->
-        <form class="add-item">
+        <form  action="/add" class="add-item"  method="post" novalidate>
             
             <!-- Form heading -->
             <h2>Add New Bill Reminder</h2>
@@ -64,70 +23,70 @@
             <!-- Bill Name Field -->
             <div class="form-group">
                 <label for="Bill Name" class="col-sm-2 col-form-label">Bill Name : </label>
-                <input type="text" id="Bill Name" class="form-control" placeholder="Enter Bill Name">
+                <input type="text" id="Bill Name" name="bill_name"class="form-control" placeholder="Enter Bill Name">
             </div>
 
             <!-- Bill Category Field -->
             <div class="form-group">
                 <label for="Bill Category" class="col-sm-2 col-form-label">Bill Category : </label>
-                <select id="Bill-Category" class="form-control">
+                <select id="Bill-Category" name="bill_category" class="form-control">
                     <option value="">Choose Bill Category</option>
-                    <option value="1">Accommodation</option>
-                    <option value="2">Credit Cards</option>
-                    <option value="3">Electricity</option>
-                    <option value="4">TV</option>
-                    <option value="5">Education</option>
-                    <option value="6">Car</option>
-                    <option value="7">Two wheeler</option>
-                    <option value="8">Food</option>
-                    <option value="9">Gifts</option>
-                    <option value="10">Insurance</option>
-                    <option value="11">Medicare</option>
-                    <option value="12">Pets</option>
-                    <option value="13">Sports</option>
-                    <option value="14">Shopping</option>
-                    <option value="15">Tax</option>
-                    <option value="16">Vacation</option>
-                    <option value="17">Investment</option>
-                    <option value="18">Savings</option>
-                    <option value="19">Child Care</option>
-                    <option value="20">Other</option>
+                    <option value="Accommodation">Accommodation</option>
+                    <option value="Credit Cards">Credit Cards</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="TV">TV</option>
+                    <option value="Education">Education</option>
+                    <option value="Car">Car</option>
+                    <option value="Two wheeler">Two wheeler</option>
+                    <option value="Food">Food</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Medicare">Medicare</option>
+                    <option value="Pets">Pets</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Tax">Tax</option>
+                    <option value="Vacation">Vacation</option>
+                    <option value="Investment">Investment</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Child Care">Child Care</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
             <!-- Amount Field -->
             <div class="form-group">
                 <label for="Amount" class="col-sm-2 col-form-label">Amount : </label>
-                <input type="number" id="Amount" class="form-control" placeholder="Enter Bill Amount">
+                <input type="number" id="Amount" name="amount" class="form-control" placeholder="Enter Bill Amount">
             </div>
 
             <!-- Due Date Field -->
             <div class="form-group">
                 <label for="Due date" class="col-sm-2 col-form-label">Due date : </label>
-                <input type="date" id="Due date" class="form-control" placeholder="Enter Due Date">
+                <input type="date" id="Due date" name="due_date" class="form-control" placeholder="Enter Due Date">
             </div>
 
             <!-- Send Notification On Field -->
             <div class="form-group">
                 <label for="Notification" class="col-sm-2 col-form-label">Send Notification On : </label>
-                <select id="Notification-Reminder" class="form-control">
+                <select id="Notification-Reminder" class="form-control" name="notification_reminder" >
                     <option value="">Choose Reminder Notification</option>
-                    <option value="1">On due date</option>
-                    <option value="2">1 Day before due date</option>
-                    <option value="3">2 Days before due date</option>
-                    <option value="4">3 Days before due date</option>
-                    <option value="5">4 Days before due date</option>
-                    <option value="6">5 Days before due date</option>
-                    <option value="7">6 Days before due date</option>
-                    <option value="8">7 Days before due date</option>
-                    <option value="9">8 Days before due date</option>
-                    <option value="10">9 Days before due date</option>
-                    <option value="11">10 Days before due date</option>
-                    <option value="12">11 Days before due date</option>
-                    <option value="13">12 Days before due date</option>
-                    <option value="14">13 Days before due date</option>
-                    <option value="15">14 Days before due date</option>
-                    <option value="16">15 Days before due date</option>
+                    <option value=0>On due date</option>
+                    <option value=1>1 Day before due date</option>
+                    <option value=2>2 Days before due date</option>
+                    <option value=3>3 Days before due date</option>
+                    <option value=4>4 Days before due date</option>
+                    <option value=5>5 Days before due date</option>
+                    <option value=6>6 Days before due date</option>
+                    <option value=7>7 Days before due date</option>
+                    <option value=8>8 Days before due date</option>
+                    <option value=9>9 Days before due date</option>
+                    <option value=10>10 Days before due date</option>
+                    <option value=11>11 Days before due date</option>
+                    <option value=12>12 Days before due date</option>
+                    <option value=13>13 Days before due date</option>
+                    <option value=14>14 Days before due date</option>
+                    <option value=15>15 Days before due date</option>
                 </select>
             </div>
 
@@ -136,23 +95,23 @@
 
                 <!-- Repeat and Don't Repeat Radio Button Option -->
                 <label for="radio_1 radio-text">
-                    <input type="radio" name="answer" class="radio-button" value="yes">
+                    <input type="radio" name="answer" name='repeat' class="radio-button" value="repeat">
                     Repeat
                 </label>
                 <label for="radio_2 radio-text">
-                    <input type="radio" name="answer" checked="checked" class="radio-button" value="no">
+                    <input type="radio" name="answer" name='dont_repeat' checked="checked" class="radio-button" value="dontRepeat">
                     Don't Repeat
                 </label>
 
                 <!-- Additional Fields for Repeat Option -->
                 <div id="ifYes" style="display:none;">
-                    Repetition Number : <input type='number' class="form-control" id="Amount" name='yes'><br>
+                    Repetition Number : <input type='number' class="form-control" name='repeat_days' id="Amount" name='yes'><br>
                     Repetition Option :  
-                        <select id="Repetition-Reminder" class="form-control">
+                        <select id="Repetition-Reminder" name='repeat_time' class="form-control">
                         <option value="">Choose One</option>
-                        <option value="1">Day/Days</option>
-                        <option value="2">Month/Months</option>
-                        <option value="3">Year/Years</option>
+                        <option value="day">Day/Days</option>
+                        <option value="month">Month/Months</option>
+                        <option value="year">Year/Years</option>
                         </select>
                 </div>
 
@@ -161,19 +120,19 @@
             <!-- Note Textarea -->
             <div class="form-group">
                 <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label note-text">Note : </label>
-                <textarea class="form-control" id="note-field" placeholder="Enter Note..." rows="3"></textarea>
+                <textarea class="form-control" name='note' id="note-field" placeholder="Enter Note..." rows="3"></textarea>
             </div>
 
             <!-- Discard and Save Buttons -->
             <div class="end-buttons">
             <button type="button" class="btn btn-success discard-btn"><i class="fas fa-trash-alt"></i> Discard</button>
-            <button type="button" class="btn btn-success save-btn"><i class="far fa-save"></i> Save</button>
+            <button type="submit" class="btn btn-success save-btn"><i class="far fa-save"></i> Save</button>
             </div>
 
         </form>
 
         <!-- Repeat Radio Button Jquery Link -->
-        <script src="../static/js/addjs.js" charset="utf-8"></script>
+        
+        <script src="{{ url_for('static', filename='js/addjs.js') }}" charset="utf-8"></script>
 
-    </body>
-</html>
+        {% endblock %}
