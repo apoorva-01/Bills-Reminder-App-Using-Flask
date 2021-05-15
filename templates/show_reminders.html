@@ -1,23 +1,114 @@
-{% extends "layout.html" %}
+<html>
+    <head>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+
+        <!-- Page title -->
+        <title>show_reminders</title>
+
+        <!-- Link to respective CSS stylesheet -->
+        <link rel="stylesheet" href="../static/css/show_reminder_style.css">
+
+        <!-- Page Icon -->
+        <link rel="icon" href="../static/img/B.png">
+
+    </head>
 
 
-{% block head %}
- <!-- Page title -->
- <title>show_reminders</title>
+    <body>
+        <header>
 
- <!-- Link to respective CSS stylesheet -->
- <link rel="stylesheet" href="../static/css/add2style.css">
+            <!-- navigation bar -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-#000">
 
- <!-- Page Icon -->
- <link rel="icon" href="../static/img/B.png">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-{% endblock %}
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Show Reminder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="add.html">Add Reminder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">User Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
+        <!-- main container -->
+        <div class="container">
+            <div class="tabs">
 
+                <!-- Show Reminder heading -->
+                <h1 class="heading">Show Reminder</h1>
 
+                <!-- Tab Header -->
+                <div class="tab-header">
+                    <div class="active">
+                        <i class="fas fa-arrow-circle-up"></i> UPCOMING
+                    </div>
+                    <div>
+                        <i class="fas fa-arrow-circle-down"></i> OVERDUE
+                    </div>
+                    <div>
+                        <i class="fas fa-thumbs-down"></i> UNPAID
+                    </div>
+                    <div>
+                        <i class="fas fa-thumbs-up"></i> PAID
+                    </div>
+                </div>
 
-{% block body %}
+                <!-- Tab Indicator -->
+                <div class="tab-indicator"></div>
 
+                <!-- Tab Body -->
+                <div class="tab-body">
+                    <div class="active">
+                        <h2>Upcoming Bills</h2>
+                        <p>Upcoming bills will appear here.</p>
+                        <!-- <section class="upcoming_bills">This section will contain Upcoming Bills</section> -->
+                    </div>
+                    <div>
+                        <h2>Overdue Bills</h2>
+                        <p>Overdue bills will appear here.</p>
+                        <!-- <section class="overdue_bills">This section will contain Overdue Bills.</section> -->
+                    </div>
+                    <div>
+                        <h2>Unpaid Bills</h2>
+                        <p>Unpaid bills will appear here.</p>
+                        <!-- <section class="unpaid_bills">This section will contan Unpaid Bills.</section> -->
+                    </div>
+                    <div>
+                        <h2>Paid Bills</h2>
+                        <p>Paid bills will appear here.</p>
+                        <!-- <section class="paid_bills">This section will contain Paid Bills</section> -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-{% endblock %}
+        <!-- Javascript link -->
+        <script src="../static/js/show_reminder_js.js" charset="utf-8"></script>
+
+    </body>
+</html>
