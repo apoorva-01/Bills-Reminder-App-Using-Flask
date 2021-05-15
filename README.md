@@ -48,7 +48,7 @@ What a user can do:
 Contributors names and contact info :
 
 
-Pnerva Singh<br>
+Punerva Singh<br>
 [@Linkedin](https://www.linkedin.com/in/punerva-singh-958305204)
 <br>
 [@Github](https://github.com/punervasingh)
