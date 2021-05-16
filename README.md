@@ -49,7 +49,7 @@ Contributors names and contact info :
 
 
 
-Pnerva Singh(Frontend Development)<br> 
+Punerva Singh(Frontend Development)<br> 
 
 Punerva Singh<br>
 
