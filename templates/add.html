@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+<!-- Page title -->
+<title>Add</title>
+
+<!-- Link to respective CSS stylesheet -->
+<link rel="stylesheet" href="../static/css/addstyle.css">
+
+<!-- Page Icon -->
+<link rel="icon" href="../static/img/B.png">
+{% endblock %}
+
+{% block body %}
+
+        <!-- Form Container -->
+        <form  action="/add" class="add-item"  method="post" novalidate>
+            
+            <!-- Form heading -->
+            <h2>Add New Bill Reminder</h2>
+        
+            <!-- Bill Name Field -->
+            <div class="form-group">
+                <label for="Bill Name" class="col-sm-2 col-form-label">Bill Name : </label>
+                <input type="text" id="Bill Name" name="bill_name"class="form-control" placeholder="Enter Bill Name">
+            </div>
+
+            <!-- Bill Category Field -->
+            <div class="form-group">
+                <label for="Bill Category" class="col-sm-2 col-form-label">Bill Category : </label>
+                <select id="Bill-Category" name="bill_category" class="form-control">
+                    <option value="">Choose Bill Category</option>
+                    <option value="Accommodation">Accommodation</option>
+                    <option value="Credit Cards">Credit Cards</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="TV">TV</option>
+                    <option value="Education">Education</option>
+                    <option value="Car">Car</option>
+                    <option value="Two wheeler">Two wheeler</option>
+                    <option value="Food">Food</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Medicare">Medicare</option>
+                    <option value="Pets">Pets</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Tax">Tax</option>
+                    <option value="Vacation">Vacation</option>
+                    <option value="Investment">Investment</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Child Care">Child Care</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Amount Field -->
+            <div class="form-group">
+                <label for="Amount" class="col-sm-2 col-form-label">Amount : </label>
+                <input type="number" id="Amount" name="amount" class="form-control" placeholder="Enter Bill Amount">
+            </div>
+
+            <!-- Due Date Field -->
+            <div class="form-group">
+                <label for="Due date" class="col-sm-2 col-form-label">Due date : </label>
+                <input type="date" id="Due date" name="due_date" class="form-control" placeholder="Enter Due Date">
+            </div>
+
+            <!-- Send Notification On Field -->
+            <!-- <div class="form-group">
+                <label for="Notification" class="col-sm-2 col-form-label">Send Notification On : </label>
+                <select id="Notification-Reminder" class="form-control" name="notification_reminder" >
+                    <option >Choose Reminder Notification</option>
+                    <option value=0>On due date</option>
+                    <option value=1>1 Day before due date</option>
+                    <option value=2>2 Days before due date</option>
+                    <option value=3>3 Days before due date</option>
+                    <option value=4>4 Days before due date</option>
+                    <option value=5>5 Days before due date</option>
+                    <option value=6>6 Days before due date</option>
+                    <option value=7>7 Days before due date</option>
+                    <option value=8>8 Days before due date</option>
+                    <option value=9>9 Days before due date</option>
+                    <option value=10>10 Days before due date</option>
+                    <option value=11>11 Days before due date</option>
+                    <option value=12>12 Days before due date</option>
+                    <option value=13>13 Days before due date</option>
+                    <option value=14>14 Days before due date</option>
+                    <option value=15>15 Days before due date</option>
+                </select>
+            </div> -->
+
+            <div class="form-group">
+                <label for="Notification" class="col-sm-2 col-form-label">Send Notification On : </label>
+                <input type="number" id="Notification-Reminder" class="form-control" name="notification_reminder"
+                 placeholder="How many days">
+            </div>
+
+
+            <!-- Repeat and Don't Repeat Radio Button Field -->
+            <div class="choice-btn">
+
+                <!-- Repeat and Don't Repeat Radio Button Option -->
+                <label for="radio_1 radio-text">
+                    <input type="radio" name="answer" name='repeat' class="radio-button" value="repeat">
+                    Repeat
+                </label>
+                <label for="radio_2 radio-text">
+                    <input type="radio" name="answer" name='dont_repeat' checked="checked" class="radio-button" value="dontRepeat">
+                    Don't Repeat
+                </label>
+
+                <!-- Additional Fields for Repeat Option -->
+                <div id="ifYes" style="display:none;">
+                    Repetition Number : <input type='number' class="form-control" name='repeat_days' id="Amount" name='yes'><br>
+                    Repetition Option :  
+                        <select id="Repetition-Reminder" name='repeat_time' class="form-control">
+                        <option value="">Choose One</option>
+                        <option value="day">Day/Days</option>
+                        <option value="month">Month/Months</option>
+                        <option value="year">Year/Years</option>
+                        </select>
+                </div>
+
+            </div>
+
+            <!-- Note Textarea -->
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label note-text">Note : </label>
+                <textarea class="form-control" name='note' id="note-field" placeholder="Enter Note..." rows="3"></textarea>
+            </div>
+
+            <!-- Discard and Save Buttons -->
+            <div class="end-buttons">
+            <button type="button" class="btn btn-success discard-btn"><i class="fas fa-trash-alt"></i> Discard</button>
+            <button type="submit" class="btn btn-success save-btn"><i class="far fa-save"></i> Save</button>
+            </div>
+
+        </form>
+
+        <!-- Repeat Radio Button Jquery Link -->
+        
+        <script src="{{ url_for('static', filename='js/addjs.js') }}" charset="utf-8"></script>
+
+        {% endblock %}

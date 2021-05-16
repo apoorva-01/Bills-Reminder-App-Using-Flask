@@ -1,0 +1,15 @@
+'New message from  Bills Reminder'   ,
+                            sender='vermaapoorva0510@gmail.com',
+                            recipients = [params['gmail-user']],
+                            body = "YOUR NOTE:" +note + "\n" 
+                            "Dear customer," + "\n"
+                            "This is a reminder that your "+billName+ " from " +billCategory+" is due "
+                            +dueDate+" with a payable amount of "+amount+ "\n"
+                            " A prompt payment will be appreciated. "
+                            " In case you want to reschedule the reminder, visit "+" bill reminder website ka link"
+                            + "\n"+" Thank you."+ "\n"+
+                            "Your Note: "+note + "\n" 
+                            + "Bill Nmae :" +billName+ "\n" 
+                            +"Bill Category :"+billCategory+ "\n" 
+                            +"Amount To Pay :"+amount+ "\n"
+                             +"Due Date :"+dueDate+ "\n"
