@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block head %}
+        <!-- Page title -->
+        <title>Bill-Reminder</title>
+
+        <!-- Link to respective CSS stylesheet -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+
+        <!-- Page Icon -->
+        <link rel="icon" href="{{url_for('static', filename='img/B.png')}}">
+
+        {% endblock %}
+
+        {% block body %}
+
+       <center>
+
+            <!-- Welcome to and Bill Reminder Heading -->
+            <h5 class="second-animation">WELCOME TO</h5>
+            <h1 class="first-animation">BILL REMINDER</h1>
+
+            <!-- Add Reminder Button -->
+            <button  class="btn btn-outline-light"><i class="fas fa-plus-circle"></i> Add Reminder</button>
+        
+        </center>
+
+        <!-- Javascript link -->
+        <script src="{{url_for('static', filename='js/index.js')}}" charset="utf-8"></script>
+        {% endblock %}

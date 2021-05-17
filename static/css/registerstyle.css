@@ -1,0 +1,170 @@
+/* Body style with backgroud image */
+body{
+    background-color: rgba(164, 177, 233, 0.781);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(7, 7, 31, 0.473),rgba(7, 7, 31, 0.473)),url('../img/bg2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* navigation bar */
+.navbar {
+    padding: 0 0 0.1rem;
+    background-color: rgba(3, 1, 1, 0);
+}
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-top: 0.5%;
+}
+.nav-item {
+    padding: 10px 15px;
+}
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Montserrat-Light";
+    
+}
+
+
+/* Icon image */
+.login-sign{
+    height: 10%;
+    width:6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin-top: 7%;
+}
+
+
+/* Sign-Up Heading */
+.Signup-heading{
+    margin: 2% 0 1% 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* Username, Password, Confirm-Password, Email and Phone number Fields */
+.input-box{
+    padding: 0 5%;
+}
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+    width: 25%;
+    padding: 8px 18px;
+    margin: 4px 0;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.507);
+    border: 1px solid rgba(92, 84, 84, 0.712);
+    box-sizing: border-box;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+::placeholder{
+    color:rgba(0, 0, 0, 0.671);
+}
+
+
+/* Register Button  */
+.btn{
+    padding: 0.5% 8%;
+    border-radius: 7px;
+    margin: 1% 0 0 0;;
+}
+
+
+/* Horizontal Rule */
+hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.616);
+    width:30%;
+}
+
+
+/* Link to Login Page */
+.login-link{
+    color: #fff;
+}
+
+
+/* Media query (Responsive for phones) */
+@media (max-width: 1100px){
+
+
+    /* navigation bar */
+    .navbar {
+        padding: 2.5rem 0 2.5rem 2rem;
+        background-color: rgb(3, 1, 1);
+    }
+    .navbar-brand {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+    .nav-item {
+      padding:4%;
+    }
+    .nav-link {
+        font-size: 3rem;
+        font-family: "Montserrat-Light";
+    }
+
+
+    /* Icon image */
+    .login-sign{
+        height: 15%;
+        width: 25%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        margin-top: 20%;
+    }
+
+
+    /* Sign-Up Heading */
+    .Signup-heading{
+        margin: 2% 0 1% 0;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+
+
+    /* Username, Password, Confirm-Password, Email and Phone number Fields */
+    input[type=text], input[type=password], input[type=email], input[type=tel] {
+        width: 70%;
+        padding: 16px 32px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid rgba(92, 84, 84, 0.712);
+        box-sizing: border-box;
+        font-size: 3rem;
+    }
+
+
+    /* Register Button  */
+    .btn{
+        padding: 1% 10%;
+        border-radius: 7px;
+        font-size: 3rem;
+    }
+
+
+    /* Horizontal Rule */
+    hr{
+        border-top: 1px solid rgba(255, 255, 255, 0.616);
+        width:70%;
+    }
+
+
+    /* Link to Login Page */
+    .login-link{
+        font-size: 3rem;
+    }
+}

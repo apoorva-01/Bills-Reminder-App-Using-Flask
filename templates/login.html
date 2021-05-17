@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block head %}
+ <!-- Page title -->
+ <title>Login</title>
+
+ <!-- Link to respective CSS stylesheet -->
+ 
+ <link rel="stylesheet" href="{{url_for('static', filename='css/loginstyle.css')}}">
+
+ <!-- Page Icon -->
+ <link rel="icon" href="{{url_for('static', filename='img/B.png')}}">
+{% endblock %}
+
+
+
+{% block body %}
+
+        <!-- Login Section -->
+        <section id="login-details">
+            <center>
+
+                <!-- Login Form -->
+                <form action="{{url_for('login')}}">
+
+                    <!-- Icon image -->
+                    
+                    <img class="login-sign" src="{{ url_for('static', filename='img/B.png') }}" alt="logo">
+
+                    <!-- Login Heading -->
+                    <h3 class="login-heading">Please Login</h3>
+
+                    <!-- Username and Password Fields -->
+                    <input class="input-box" type="text" placeholder="Enter Username" name="username" required>
+                    <br>
+                    <input class="input-box" type="password" placeholder="Password" name="password" required>
+                    <br>
+
+                    <!-- Remember me checkbox -->
+                    <label class="checkbox">
+                        <p class="checkbox-text"><input type="checkbox" class="checkbox"value="remember-me" id="remember_me"> Remember me</p> 
+                    </label>
+                    <br>
+
+                    <!-- Login Button -->
+                    <button type="button" class="btn btn-success"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    
+                    <!-- Horizontal Rule -->
+                    <hr class="sep">
+
+                    <!-- Link to Sign-Up Page -->
+                    <p class="signup-link">Are you a new user then register <a href="{{ url_for('register')}}">here</a>.</p>
+
+                </form>
+
+            </center>
+        </section>
+
+{% endblock %}

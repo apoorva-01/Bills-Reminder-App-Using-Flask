@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+{% block head %}
+        <!-- Page title -->
+        <title>show_reminders</title>
+
+        <!-- Link to respective CSS stylesheet -->
+        
+        <link rel="stylesheet" href="{{url_for('static', filename='css/show_reminder_style.css')}}">
+
+        <!-- Page Icon -->
+        
+        <link rel="icon" href="{{url_for('static', filename='img/B.png')}}">
+
+
+{% endblock %}
+
+{% block body %}
+        <!-- main container -->
+        <div class="container">
+            <div class="tabs">
+
+                <!-- Show Reminder heading -->
+                <h1 class="heading">Show Reminder</h1>
+
+                <!-- Tab Header -->
+                <div class="tab-header">
+                    <div class="active">
+                        <i class="fas fa-arrow-circle-up"></i> UPCOMING
+                    </div>
+                    <div>
+                        <i class="fas fa-arrow-circle-down"></i> OVERDUE
+                    </div>
+                    <div>
+                        <i class="fas fa-thumbs-down"></i> UNPAID
+                    </div>
+                    <div>
+                        <i class="fas fa-thumbs-up"></i> PAID
+                    </div>
+                </div>
+
+                <!-- Tab Indicator -->
+                <div class="tab-indicator"></div>
+
+                <!-- Tab Body -->
+                <div class="tab-body">
+                    <div class="active">
+                        <h2>Upcoming Bills</h2>
+                        <p>Upcoming bills will appear here.</p>
+                        <!-- <section class="upcoming_bills">This section will contain Upcoming Bills</section> -->
+                    </div>
+                    <div>
+                        <h2>Overdue Bills</h2>
+                        <p>Overdue bills will appear here.</p>
+                        <!-- <section class="overdue_bills">This section will contain Overdue Bills.</section> -->
+                    </div>
+                    <div>
+                        <h2>Unpaid Bills</h2>
+                        <p>Unpaid bills will appear here.</p>
+                        <!-- <section class="unpaid_bills">This section will contan Unpaid Bills.</section> -->
+                    </div>
+                    <div>
+                        <h2>Paid Bills</h2>
+                        <p>Paid bills will appear here.</p>
+                        <!-- <section class="paid_bills">This section will contain Paid Bills</section> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript link -->
+        
+        <script src="{{url_for('static', filename='js/show_reminder.js')}}" charset="utf-8"></script>
+
+{% endblock %} 
+
+
+
+            
