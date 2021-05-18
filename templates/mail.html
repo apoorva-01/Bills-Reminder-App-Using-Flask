@@ -17,96 +17,177 @@
         <link rel="icon" href="../static/img/B.png" >
 
         <style>
-            body{padding:100px}
-            h1{text-align: center;}
-            p{margin: 20px;}
-            button{margin: auto; 
-            display:block}
+            body{
+                padding: 0 100px;
+                background-color: #978c8cce;
+                font-family: 'Ubuntu';
+            }
+            .container{
+                background-color: #fff;
+                padding: 0 25px 15px 25px;
+                width: 60%;
+            }
+            .image{
+                width: 80%;
+                height: 50%;
+            }
+            h1, h2{
+                text-align: center;
+                font-weight: bold;
+                margin: 3% 0;
+            }
+            p{
+                margin: 5% 0;
+            }
+            button{
+                padding: 8px 16px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 4%;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+                border-radius: 5px;
+            }
+            .button:hover {
+                background-color: #4CAF50;
+                color: white;
+                outline: none;
+            }
+            #reminders {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #reminders td, #reminders th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #reminders tr:nth-child(even){background-color: #f2f2f2;}
+
+            #reminders tr:hover {background-color: #ddd;}
+
+            #reminders th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+            .footer {
+                position: relative;
+                height: 5%;
+                left: 0;
+                bottom: 0;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            .footer p{
+                top: 50%;
+            }
+            @media (max-width: 1100px){
+                body{
+                    padding: 0 50px;
+                }
+                .container{
+                    padding: 0 25px 15px 25px;
+                    width: 100%;
+                }
+                .image{
+                    width: 90%;
+                    height: 40%;
+                }
+                h1{
+                    font-size: 5rem;
+                }
+                h2{
+                    font-size: 4rem;
+                }
+                p, button, #reminders{
+                    font-size: 2rem;
+                }
+            }
 
         </style>
 
-        
 
     </head>
 
-
     <body>
-        <!doctype html>
-<html lang="en">
-  
-  <body>
-    <h1>Bills Reminder</h1>
-    <h1>Reminding your Bill_Name</h1>
-    <p>
-        This ia a bill reminding project. There are 4 people working on it jinka
-        naam apoorva, punerva, aakanksha aur nayan h. Firstly that garima
-        (khiskeli) has dropped our initial idea beacause she doesn't not have 
-        enough brain to understand our project but later usne hame bill Reminder
-        vala project diya on which we are working. Bolo jai mata di...taki 
-        hamara project achha ho. kisi ko gana sunna h kya ?? batao batao sharmao
-        mat, dil khol kar bolo !!
-      
-    </p>
+        <div class="container">
+            <center>
+            <img class="image" src="../static/img/pic.jpg" alt="bill-reminder">
+            </center>
+            <h1>BILLS REMINDER</h1>
+            <h2>Reminding your Bill_Name</h2>
+            <p>Hey <strong>Customer_Name</strong> !</p>
+            <p>
+                This is a bill reminding project. There are 4 people working on it jinka
+                naam apoorva, punerva, aakanksha aur nayan h.  Bolo jai mata di...taki 
+                hamara project achha ho. kisi ko gana sunna h kya ?? batao batao sharmao
+                mat, dil khol kar bolo !!
+            </p>
 
-    <table class="table table-dark table-hover" >
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            
-          </tr>
-        
-          <tr>
-            <th scope="row">2</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            
-          </tr>
-        
-          <tr>
-            <th scope="row">3</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            
-          </tr>
-        
-          <tr>
-            <th scope="row">4</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            
-          </tr>
-        
-          <tr>
-            <th scope="row">5</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            
-          </tr>
-        
-        </tbody>
-    </table>
+            <table id="reminders" >
+                <thead>
+                <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Bill Details</th>
+                    <th scope="col">Inputted Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Bill Name</td>
+                    <td>bill_name</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Bill Category</td>
+                    <td>bill_category</td>
+                    
+                </tr>
 
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Bill Amount</td>
+                    <td>bill_amount</td>
+                    
+                </tr>
 
-    <p>
-        This ia a bill reminding project. There are 4 people working on it jinka
-        naam apoorva, punerva, aakanksha aur nayan h. Firstly that garima
-        (khiskeli) has dropped our initial idea beacause she doesn't not have 
-        enough brain to understand our project but later usne hame bill Reminder
-        vala project diya on which we are working. Bolo jai mata di...taki 
-        hamara project achha ho. kisi ko gana sunna h kya ?? batao batao sharmao
-        mat, dil khol kar bolo !!
-      
-    </p>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>Due Date</td>
+                    <td>due_date</td>
+                    
+                </tr>
+                
+                </tbody>
+            </table>
+            <center>
+            <button onclick="location.href='index.html';" type="button" class="button">Open Reminder</button>
+            </center>
+            <p>
+                This is a bill reminding project. There are 4 people working on it jinka
+                naam apoorva, punerva, aakanksha aur nayan h. Bolo jai mata di...taki 
+                hamara project achha ho. kisi ko gana sunna h kya ?? batao batao sharmao
+                mat, dil khol kar bolo !!
+                
+            </p>
+            <div class="footer">
+                <p>copyright@bill-reminder</p>
+            </div>
+        </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
